@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: server-order-pod
+  labels:
+    name: server-order-pod
+    app: ctse-app
+
+spec:
+  containers:
+    - name: shop-order-pod
+      image: kasunidocker/ctse-order
+      ports:
+        - containerPort: 3000
